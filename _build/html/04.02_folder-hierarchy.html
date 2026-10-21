@@ -1,0 +1,750 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Folder Hierarchy &#8212; MAEASaM Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '04.02_folder-hierarchy';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Hierarchy Tree" href="04.03.1_hierarchy-text.html" />
+    <link rel="prev" title="File Naming" href="04.01_file-naming.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="00_intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/MAEASaM_logo_t.svg" class="logo__image only-light" alt="MAEASaM Documentation - Home"/>
+    <script>document.write(`<img src="_static/MAEASaM_logo_t.svg" class="logo__image only-dark" alt="MAEASaM Documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00_intro.html">
+                    Welcome to MAEASaM Project Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="04_file-organisation-schema.html">File Organisation Schema</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="04.01_file-naming.html">File Naming</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Folder Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.03.1_hierarchy-text.html">Hierarchy Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.04_special-cases.html">Special Cases</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MAEASaM/Documentation" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MAEASaM/Documentation/issues/new?title=Issue%20on%20page%20%2F04.02_folder-hierarchy.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/04.02_folder-hierarchy.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Folder Hierarchy</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sites">Sites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing">Remote Sensing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#media">Media</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-details">Dataset Details</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback">Feedback</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reports">Reports</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="folder-hierarchy">
+<h1>Folder Hierarchy<a class="headerlink" href="#folder-hierarchy" title="Link to this heading">#</a></h1>
+<p>Files are divided into two main categories:</p>
+<p><em><strong>1.	Dataset</strong></em></p>
+<ul class="simple">
+<li><p>Sites</p></li>
+<li><p>Remote Sensing</p></li>
+<li><p>Media</p></li>
+<li><p>Resources</p></li>
+</ul>
+<p><em><strong>2.	Documentation</strong></em></p>
+<ul class="simple">
+<li><p>Reports</p></li>
+<li><p>Feedback</p></li>
+<li><p>Dataset Details</p></li>
+</ul>
+<p>This structure makes it easier to manage, review, and prepare datasets for final delivery.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See the <a class="reference internal" href="04.03.1_hierarchy-text.html"><span class="std std-doc">Hierarchy Tree</span></a> section for a visual representation of this structure.</p>
+</div>
+<section id="dataset">
+<h2>Dataset<a class="headerlink" href="#dataset" title="Link to this heading">#</a></h2>
+<p>This is the main group containing all files and folders that represent heritage data in different formats. The purpose of organising data in this way is to make the workflow predictable, so that anyone opening the dataset can immediately understand where to find specific types of information.</p>
+<hr>
+<section id="sites">
+<h3>Sites<a class="headerlink" href="#sites" title="Link to this heading">#</a></h3>
+<p>The Sites folder stores all information related to heritage site records. It is divided into two main parts:</p>
+<p><em><strong>1.	Metadata folder</strong></em></p>
+<ul class="simple">
+<li><p>Contains working spreadsheets (<em>.xlsx</em>).</p></li>
+</ul>
+<p><em><strong>Naming convention:</strong></em>
+yyyymmdd_GMB_SiteMetadata_LB.xlsx</p>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>Please refer to the <a class="reference internal" href="04.04_special-cases.html"><span class="std std-doc">Special Cases</span></a> section for situations where different file naming conventions may apply, such as when working with multiple batches or multiple people.</p>
+</div>
+<ul class="simple">
+<li><p>You should create a new copy of the file every day you make changes. This preserves previous versions, so if there is an error or data loss, we can go back to the last working copy.</p></li>
+<li><p>These files must follow the MAEASaM Sites metadata template, ensuring that the data can be read consistently by both people and systems.</p></li>
+</ul>
+<p><em><strong>2.	Geometry folder</strong></em></p>
+<p>This folder contains the spatial information. Since sites can be represented in different shapes (points, polygons, lines), the Geometry folder is divided into three subfolders:</p>
+<ul class="simple">
+<li><p>Points (for locations defined by coordinates)</p></li>
+<li><p>Polygons (for areas such as site boundaries)</p></li>
+<li><p>Lines (for linear features such as walls or roads)</p></li>
+</ul>
+<p>Each of these subfolders must include a dated working folder.</p>
+<p><em><strong>Example</strong></em>
+yyyymmdd_GMB_SitePoints_LB<br>
+yyyymmdd_GMB_SitePolygons_LB<br>
+yyyymmdd_GMB_SiteLines_LB</p>
+<p>Inside, files must be exported in the following formats:
+<em>.cpg, .dbf, .prj, .shp, .kml</em></p>
+<p>These are standard GIS formats required for interoperability. Other export files (e.g., <em>.shx, .qmd, .gpkg</em>) are optional.</p>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>Always create the working folder first before adding shapefiles. Every time you modify the shapefiles, create a new folder with the updated date. Shapefiles must be organized inside separate, properly named folders to ensure consistency.</p>
+</div>
+<p>The reason for requiring multiple file types is that shapefiles are not a single file but a package. Without all the necessary components, the data may not open correctly in GIS software.</p>
+<hr>
+</section>
+<section id="remote-sensing">
+<h3>Remote Sensing<a class="headerlink" href="#remote-sensing" title="Link to this heading">#</a></h3>
+<p>The structure of the Remote Sensing folder is the same as Sites, because it also contains metadata and geometry:</p>
+<p><em><strong>1.	Metadata folder</strong></em></p>
+<ul class="simple">
+<li><p>Spreadsheet (<em>.xlsx</em>), named as:</p></li>
+</ul>
+<p>yyyymmdd_GMB_RSMetadata_LB.xlsx</p>
+<ul class="simple">
+<li><p>The “RS” tag ensures that metadata for remote sensing datasets is distinguishable from site metadata.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When working with multiple batches add Grid ID as subtitle, such as:</p>
+<p>yyyymmdd_SDN_RSMetadata_E27.6N15.3_TA</p>
+<p>Please visit <a class="reference internal" href="04.04_special-cases.html#using-subtitles-for-batch-differentiation"><span class="std std-ref">Special Cases - Using Subtitles for Batch Differentiation</span></a> for more details.</p>
+</div>
+<p><em><strong>2.	Geometry folder</strong></em></p>
+<p>Divided into the same subfolders as Points, Polygons, and Lines, with an additional Footprints subfolder:</p>
+<ul class="simple">
+<li><p>Points</p></li>
+<li><p>Polygons</p></li>
+<li><p>Lines</p></li>
+<li><p>Footprints (areas covered by imagery or remote sensing data)</p></li>
+</ul>
+<p>Naming follows the same pattern as in Sites, but with “RS” in the title.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The general logic is roughly to follow the folder names when naming files.</p>
+</div>
+<p><em><strong>Example:</strong></em></p>
+<p>yyyymmdd_GMB_RSPoints_LB.shp <br>
+yyyymmdd_GMB_RSFootprints_LB.dbf</p>
+<p><em>This parallel structure is intentional:</em> it makes the system easier to learn and ensures that whether you are dealing with site or remote sensing data, the organisation looks and feels the same.</p>
+<hr>
+</section>
+<section id="media">
+<h3>Media<a class="headerlink" href="#media" title="Link to this heading">#</a></h3>
+<p>The Media folder contains images and potentially other media types in the future (e.g., 3D models, videos, audio). It is organized into two subfolders: Metadata and Files.</p>
+<p><em><strong>1.	Metadata</strong></em></p>
+<ul class="simple">
+<li><p>Metadata spreadsheet must be named as: <br>
+yyyymmdd_GMB_MediaMetadata_LB.xlsx</p></li>
+</ul>
+<p><em><strong>2.	Files</strong></em></p>
+<ul class="simple">
+<li><p>Each media file should be assigned a unique ID and short descriptive name.</p></li>
+</ul>
+<p><em><strong>Example:</strong></em></p>
+<p>GMB-MED-000001_Wassu01.jpg</p>
+<ul class="simple">
+<li><p>For now, files may be uploaded in their existing form, as long as they are in one of the accepted formats: <em>.jpg, .jpeg, .png, .tiff.</em></p></li>
+<li><p>This approach makes it easier to track individual media items while ensuring they can be linked to metadata records later.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Media files, being secondary to the main MAEASaM repository, can benefit from this structure to simplify local management and tracking.</p>
+</div>
+<hr>
+</section>
+<section id="resources">
+<h3>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h3>
+<p>The Resources folder contains the reference materials used to create your metadata. These could include reports, articles, or maps. It is organized into two subfolders: Metadata and Files.</p>
+<p><em><strong>1.	Metadata</strong></em></p>
+<ul class="simple">
+<li><p>Metadata spreadsheet must be named as: <br>
+yyyymmdd_GMB_ResourceMetadata_LB.xlsx</p></li>
+</ul>
+<p><em><strong>2.	Files</strong></em></p>
+<ul class="simple">
+<li><p>Each resource should have a unique ID and descriptive title, as reflected in the metadata.</p></li>
+<li><p>Resource files should be stored in open, sustainable formats such as .pdf, .pdf/a, .csv, .jpg, .jpeg, .png, .tiff.</p></li>
+<li><p>File names should correspond to the IDs listed in the metadata.</p></li>
+<li><p>This structure reduces the risk of future accessibility problems and ensures that others can re-use and verify the sources you used.</p></li>
+</ul>
+<p><em><strong>Example:</strong></em></p>
+<p>GMB-RES-000001_TitleOfResource.pdf</p>
+<p>Storing resources in stable, widely supported formats minimizes the risk of future accessibility issues and ensures that others can reliably re-use and verify the sources you have used.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While resource management is currently handled via Zotero, this section may still be used as a supplementary location for storing resource information.</p>
+</div>
+</section>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h2>
+<p>The Documentation group contains files that describe, explain, or support the dataset. While the Dataset folders store the raw and processed data itself, the Documentation folders provide the context that makes those datasets understandable and reusable. Without documentation, the data may be difficult to interpret in the future, even for the person who originally created it.
+This group is therefore essential for communication between project members and for long-term data preservation.</p>
+<hr>
+<section id="dataset-details">
+<h3>Dataset Details<a class="headerlink" href="#dataset-details" title="Link to this heading">#</a></h3>
+<p>This folder contains two important files as “Dataset details” and “Data Tracker”.</p>
+<p>The <strong>Dataset Details</strong> document is <strong>mandatory</strong>. It serves as a descriptive record of the dataset and ensures that others (archaeologists, archivists, or future team members) can understand what has been created. This file must also be included with the datasets in the Archival Information Package at the end of the submission period.</p>
+<p>Required contents:</p>
+<ul class="simple">
+<li><p>Responsible person(s)</p></li>
+<li><p>Contact information</p></li>
+<li><p>Dataset description (number of files, formats, associated media, etc.)</p></li>
+<li><p>Access and rights information</p></li>
+</ul>
+<p>Drafting format: <em>.docx</em></p>
+<p>Final version format: <em>.pdf or .pdf/a</em> (for long-term preservation)</p>
+<p><em><strong>Example:</strong></em></p>
+<p>yyyymmdd_GMB_DatasetDetails_LB.pdf</p>
+<p><strong>Why this matters:</strong> Dataset Details act as a quick reference guide. When returning to the dataset after months or years, it helps you remember the scope and status of your work, while also informing others how to interpret and use the files.</p>
+<p>The other mandatory file, <strong>Data Tracker</strong>, is used to define the records to be worked on at the start of the submission period, track these records throughout the period, support auditing processes, and monitor which Archival Information Packages the final datasets are stored in.</p>
+<p>The file name should include the country code and submission period, using the following format:</p>
+<p>GMB_DataTracker_Y5SP1</p>
+<p>Here, Y5SP1 stands for Year 5 Submission Period 1.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Templates and detailed instructions for the Dataset Details and Data Tracker files will be provided soon.</p>
+</div>
+</section>
+<section id="feedback">
+<h3>Feedback<a class="headerlink" href="#feedback" title="Link to this heading">#</a></h3>
+<p>This folder collects all reviews, corrections, and notes created during the project. Feedback is an important part of the iterative process of data cleaning and preparation.</p>
+<ul class="simple">
+<li><p>Both the Digital Data Coordinator and other project members may upload feedback here.</p></li>
+<li><p>File naming should follow the original file name with “Feedback” and the reviewer’s initials added.</p></li>
+</ul>
+<p><em><strong>Examples:</strong></em></p>
+<p>yyyymmdd_GMB_SiteMetadata_Feedback_OU.pdf</p>
+<p>yyyymmdd_GMB_SiteMetadata_Feedback_OU.xlsx</p>
+<p>Specific cases (such as Arches ingestion results) should also be stored here, with the same naming logic.</p>
+<p><em><strong>Example:</strong></em></p>
+<p>20250807_GMB_ArchesManualEntry_Feedback_OU.pdf</p>
+<p><strong>Why this matters:</strong> Keeping feedback in one place prevents confusion, ensures that comments are not lost, and allows the team to track the history of decisions and changes.</p>
+<hr>
+</section>
+<section id="reports">
+<h3>Reports<a class="headerlink" href="#reports" title="Link to this heading">#</a></h3>
+<p>The Reports folder contains technical reports related to the dataset lifecycle.
+Examples include:</p>
+<ul class="simple">
+<li><p>Merge reports (e.g., combining versions or datasets)</p></li>
+<li><p>Virus scan results</p></li>
+<li><p>Checksum reports (to verify data integrity)</p></li>
+</ul>
+<p><em><strong>Example naming:</strong></em></p>
+<p>yyyymmdd_GMB_v1-v2_MergeReport_LB.pdf</p>
+<p><strong>Why this matters:</strong> Reports provide evidence that the data has been checked and verified. They help build trust in the dataset by showing that quality control measures were followed. This becomes increasingly important in later phases of the project, when datasets are archived or published.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="04.01_file-naming.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">File Naming</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="04.03.1_hierarchy-text.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Hierarchy Tree</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sites">Sites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing">Remote Sensing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#media">Media</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-details">Dataset Details</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback">Feedback</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reports">Reports</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By OU
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

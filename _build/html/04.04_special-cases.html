@@ -1,0 +1,685 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Special Cases &#8212; MAEASaM Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '04.04_special-cases';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Hierarchy Tree" href="04.03.1_hierarchy-text.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="00_intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/MAEASaM_logo_t.svg" class="logo__image only-light" alt="MAEASaM Documentation - Home"/>
+    <script>document.write(`<img src="_static/MAEASaM_logo_t.svg" class="logo__image only-dark" alt="MAEASaM Documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00_intro.html">
+                    Welcome to MAEASaM Project Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="04_file-organisation-schema.html">File Organisation Schema</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="04.01_file-naming.html">File Naming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.02_folder-hierarchy.html">Folder Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.03.1_hierarchy-text.html">Hierarchy Tree</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Special Cases</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MAEASaM/Documentation" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MAEASaM/Documentation/issues/new?title=Issue%20on%20page%20%2F04.04_special-cases.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/04.04_special-cases.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Special Cases</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-multiple-people">Working with multiple people</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-data-tracker">Example – Data Tracker</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-multiple-batches">Working with multiple batches</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-data-tracker-with-batches">Example – Data Tracker with batches</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-subtitles-for-batch-differentiation">Using Subtitles for Batch Differentiation:</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="special-cases">
+<h1>Special Cases<a class="headerlink" href="#special-cases" title="Link to this heading">#</a></h1>
+<p>Each country may require specific rules when organising project data. Minor adjustments can be made as long as they follow the general standards described above.</p>
+<section id="working-with-multiple-people">
+<h2>Working with multiple people<a class="headerlink" href="#working-with-multiple-people" title="Link to this heading">#</a></h2>
+<p>When more than one person works within the same country folder, records must be carefully separated and assigned unique MAEASaM identifiers. Clear communication between team members is essential, but memory and assumptions are unreliable. As the Latin phrase reminds us: <em>Verba volant, scripta manent</em> — spoken words fly away, written ones remain. To avoid confusion, decisions must be documented and followed consistently.</p>
+<p>At the start of dataset preparation, team members should:</p>
+<ol class="arabic simple">
+<li><p>Divide the records among themselves.</p></li>
+<li><p>Record assignments using the Data Tracker template.</p></li>
+</ol>
+<p>The Data Tracker consists of the following columns:</p>
+<ul class="simple">
+<li><p><strong>Data Group</strong> (e.g. Site Data, Remote Sensing, Media)</p></li>
+<li><p><strong>Responsible Person</strong> (initials or name)</p></li>
+<li><p><strong>MAEASaM ID</strong> (incremental, country-specific identifiers)</p></li>
+<li><p><strong>Name</strong> (record name or short description)</p></li>
+<li><p><strong>File Name</strong> (working file name, see File Naming)</p></li>
+<li><p><strong>Deadline</strong> (date of expected submission)</p></li>
+</ul>
+<section id="example-data-tracker">
+<h3>Example – Data Tracker<a class="headerlink" href="#example-data-tracker" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Data Group</p></th>
+<th class="head"><p>Responsible Person</p></th>
+<th class="head"><p>MAEASaM ID</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>File Name</p></th>
+<th class="head"><p>Deadline</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Site Data</p></td>
+<td><p>PO</p></td>
+<td><p>SITE-KEN-00000001</p></td>
+<td><p>Site Name Example 1</p></td>
+<td><p>KEN_SiteMetadata_PO</p></td>
+<td><p>31/10/2025</p></td>
+</tr>
+<tr class="row-odd"><td><p>Site Data</p></td>
+<td><p>PO</p></td>
+<td><p>SITE-KEN-00000002</p></td>
+<td><p>Site Name Example 2</p></td>
+<td><p>KEN_SiteMetadata_PO</p></td>
+<td><p>31/10/2025</p></td>
+</tr>
+<tr class="row-even"><td><p>Site Data</p></td>
+<td><p>AK</p></td>
+<td><p>SITE-KEN-00000003</p></td>
+<td><p>Site Name Example 3</p></td>
+<td><p>KEN_SiteMetadata_AK</p></td>
+<td><p>31/10/2025</p></td>
+</tr>
+<tr class="row-odd"><td><p>Site Data</p></td>
+<td><p>AK</p></td>
+<td><p>SITE-KEN-00000004</p></td>
+<td><p>Site Name Example 4</p></td>
+<td><p>KEN_SiteMetadata_AK</p></td>
+<td><p>31/10/2025</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>You can define your <strong>Data Group</strong> as <em>Site Data</em>, <em>Remote Sensing</em>, or <em>Media</em>.<br />
+The <strong>Responsible Person</strong> column should contain the name or initials of the team member preparing the dataset.</p>
+<p>The <strong>MAEASaM ID</strong> column is where you create incremental identifiers specific to your country.</p>
+<p><em><strong>Format:</strong></em></p>
+<p>SITE-CountryCode-#########</p>
+<p><em><strong>Example:</strong></em></p>
+<p>SITE-KEN-00000001</p>
+<p>Each ID must be paired with a corresponding entry in the <strong>Name</strong> column, which provides a clear description of the record.</p>
+<p>The <strong>File Name</strong> column should indicate the actual working file where the record is stored, so others can directly locate it in the heritage folder. <strong>Do not include the date</strong> in <em>yyyymmdd</em> format (see <a class="reference internal" href="04.01_file-naming.html"><span class="std std-doc"><em>File Naming</em></span></a>) since these are working files and are expected to be updated every time you make changes. This approach is especially useful when splitting files into batches for easier organisation.</p>
+<p>Finally, the <strong>Deadline</strong> column specifies the date by which the dataset should be ready.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="working-with-multiple-batches">
+<h2>Working with multiple batches<a class="headerlink" href="#working-with-multiple-batches" title="Link to this heading">#</a></h2>
+<p>In some cases, a country folder may contain very large numbers of records, or information needs to be divided into smaller sets to allow efficient ingestion, checking, and correction. In such cases, data can be organised into batches while still tracked through the same Data Tracker logic.</p>
+<p>For batches, apply the file naming convention with a batch number:</p>
+<p><em><strong>Format:</strong></em></p>
+<p>yyyymmdd_Group_Title_b##_Initials_v##.format</p>
+<p><em><strong>Example:</strong></em></p>
+<p>20250913_KEN_SitePoints_b01_LB_v01.xlsx</p>
+<section id="example-data-tracker-with-batches">
+<h3>Example – Data Tracker with batches<a class="headerlink" href="#example-data-tracker-with-batches" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Data Group</p></th>
+<th class="head"><p>Responsible Person</p></th>
+<th class="head"><p>MAEASaM ID</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>File Name</p></th>
+<th class="head"><p>Deadline</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Site Data</p></td>
+<td><p>PO</p></td>
+<td><p>SITE-KEN-00000001</p></td>
+<td><p>Site Name Example 1</p></td>
+<td><p>KEN_SiteMetadata_b01_PO</p></td>
+<td><p>31/10/2025</p></td>
+</tr>
+<tr class="row-odd"><td><p>Site Data</p></td>
+<td><p>PO</p></td>
+<td><p>SITE-KEN-00000002</p></td>
+<td><p>Site Name Example 2</p></td>
+<td><p>KEN_SiteMetadata_b01_PO</p></td>
+<td><p>31/10/2025</p></td>
+</tr>
+<tr class="row-even"><td><p>Site Data</p></td>
+<td><p>AK</p></td>
+<td><p>SITE-KEN-00000003</p></td>
+<td><p>Site Name Example 3</p></td>
+<td><p>KEN_SiteMetadata_b01_AK</p></td>
+<td><p>31/10/2025</p></td>
+</tr>
+<tr class="row-odd"><td><p>Site Data</p></td>
+<td><p>AK</p></td>
+<td><p>SITE-KEN-00000004</p></td>
+<td><p>Site Name Example 4</p></td>
+<td><p>KEN_SiteMetadata_b01_AK</p></td>
+<td><p>31/10/2025</p></td>
+</tr>
+<tr class="row-even"><td><p>Site Data</p></td>
+<td><p>PO</p></td>
+<td><p>SITE-KEN-00000005</p></td>
+<td><p>Site Name Example 5</p></td>
+<td><p>KEN_SiteMetadata_b02_PO</p></td>
+<td><p>31/12/2025</p></td>
+</tr>
+<tr class="row-odd"><td><p>Site Data</p></td>
+<td><p>AK</p></td>
+<td><p>SITE-KEN-00000006</p></td>
+<td><p>Site Name Example 6</p></td>
+<td><p>KEN_SiteMetadata_b02_AK</p></td>
+<td><p>31/12/2025</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>In this example:</p>
+<ul class="simple">
+<li><p><strong>PO</strong> manages batch 01 (Site IDs 001–002) with a deadline of 31/10/2025, and batch 02 (Site ID 005) with a deadline of 31/12/2025.</p></li>
+<li><p><strong>AK</strong> prepares batch 01 (Site IDs 003–004) with a deadline of 31/10/2025, and another file in batch 02 (Site ID 006) with a deadline of 31/12/2025.</p></li>
+</ul>
+<p>This table shows only six records for clarity. In practice, batches may include 50, 100, or more records depending on project requirements.</p>
+</section>
+<section id="using-subtitles-for-batch-differentiation">
+<h3>Using Subtitles for Batch Differentiation:<a class="headerlink" href="#using-subtitles-for-batch-differentiation" title="Link to this heading">#</a></h3>
+<p>Sometimes, different subtitle formats can be used to separate batches, such as by country name, data group, or grid reference:</p>
+<ul class="simple">
+<li><p>KEN_SiteMetadata_Demo_AK</p></li>
+<li><p>KEN_SiteMetadata_Mombasa_AK</p></li>
+<li><p>SDN_RSMetadata_E27.6N15.3_TA</p></li>
+</ul>
+<p>Esecially when working with <strong>remote sensing data</strong>, batches <strong>must be</strong> organized according to grid references to facilitate processing and tracking.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="04.03.1_hierarchy-text.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Hierarchy Tree</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-multiple-people">Working with multiple people</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-data-tracker">Example – Data Tracker</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-multiple-batches">Working with multiple batches</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-data-tracker-with-batches">Example – Data Tracker with batches</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-subtitles-for-batch-differentiation">Using Subtitles for Batch Differentiation:</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By OU
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
