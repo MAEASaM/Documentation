@@ -5,6 +5,7 @@ title: MAEASaM Documentation
 author: OU
 logo: MAEASaM_logo_t.svg
 
+
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
@@ -30,3 +31,9 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  extra_footer: |
+    <p>© 2026 MAEASaM Project</p>
+
+sphinx:
+  config:
+    html_show_copyright: false
